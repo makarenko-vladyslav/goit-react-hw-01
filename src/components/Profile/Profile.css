@@ -1,0 +1,64 @@
+.user-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 auto;
+  border: 1px black solid;
+  border-radius: 4px;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+.user-card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+.user-info-title {
+  margin-bottom: 8px;
+}
+
+.user-info-text {
+  color: #808080;
+  margin-bottom: 6px;
+}
+
+.user-stats-list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #d3d3d3;
+}
+
+.user-stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #808080;
+  padding: 10px 8px;
+}
+
+.user-stats-item:not(:last-child) {
+  border-right: 1px solid #808080;
+}
+
+.user-stats-text {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.user-stats-count {
+  font-weight: 600;
+}
