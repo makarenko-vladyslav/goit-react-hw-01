@@ -1,5 +1,5 @@
 import "./TransactionHistory.css";
-// import FriendListItem from "./FriendListItem";
+import React from "react";
 
 export default function TransactionHistory({ items }) {
   return (
@@ -13,17 +13,17 @@ export default function TransactionHistory({ items }) {
           </tr>
         </thead>
 
-        <tbody>
-          {items.map((item) => (
-            <>
+        {items.map((item) => (
+          <React.Fragment key={item.id}>
+            <tbody>
               <tr className="info-row">
                 <td className="info-column">{item.type} </td>
                 <td className="info-column">{item.amount}</td>
                 <td className="info-column">{item.currency}</td>
               </tr>
-            </>
-          ))}
-        </tbody>
+            </tbody>
+          </React.Fragment>
+        ))}
       </table>
     </div>
   );
