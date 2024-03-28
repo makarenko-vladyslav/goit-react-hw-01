@@ -4,22 +4,22 @@
   margin-left: auto;
 }
 
-.table-titles {
+.titles {
   background-color: #2a2a2a;
   border: 1px solid black;
   color: #fafafa;
 }
 
-.info-column {
+.column {
   border: 1px solid black;
   width: 180px;
   text-align: center;
 }
 
-.info-row:nth-child(even) {
-  background-color: #d3d3d3;
+.row:nth-child(even) {
+  background: #d3d3d3;
 }
 
-.info-column::first-letter {
+.column::first-letter {
   text-transform: uppercase;
 }

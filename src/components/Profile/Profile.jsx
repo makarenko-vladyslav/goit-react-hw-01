@@ -1,4 +1,4 @@
-import "./Profile.css";
+import css from './Profile.module.css'
 
 export default function Profile({
   user: {
@@ -11,32 +11,32 @@ export default function Profile({
 }) {
   return (
     <div className="section">
-      <div className="user-card">
-        <div className="user-card-info">
+      <div className={css.card}>
+        <div className={css.cardInfo}>
           <img
             src={avatar}
             alt={username + " avatar"}
-            className="user-avatar"
+            className={css.avatar}
             width="80"
             height="80"
           />
-          <h3 className="user-info-title">{username}</h3>
-          <p className="user-info-text">@{tag}</p>
-          <p className="user-info-text">{location}</p>
+          <h3 className={css.infoTitle}>{username}</h3>
+          <p className={css.infoText}>@{tag}</p>
+          <p className={css.infoText}>{location}</p>
         </div>
 
-        <ul className="user-stats-list">
-          <li className="user-stats-item">
-            <span className="user-stats-text">Followers</span>
-            <span className="user-stats-count">{followers}</span>
+        <ul className={css.list}>
+          <li className={css.listItem}>
+            <span className={css.statsText}>Followers</span>
+            <span className={css.statsCount}>{followers}</span>
           </li>
-          <li className="user-stats-item">
-            <span className="user-stats-text">Views</span>
-            <span className="user-stats-count">{views}</span>
+          <li className={css.listItem}>
+            <span className={css.statsText}>Views</span>
+            <span className={css.statsCount}>{views}</span>
           </li>
-          <li className="user-stats-item">
-            <span className="user-stats-text">Likes</span>{" "}
-            <span className="user-stats-count">{likes}</span>
+          <li className={css.listItem}>
+            <span className={css.statsText}>Likes</span>{" "}
+            <span className={css.statsCount}>{likes}</span>
           </li>
         </ul>
       </div>

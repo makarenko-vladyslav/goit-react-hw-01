@@ -1,29 +1,29 @@
-import "./TransactionHistory.css";
+import css from "./TransactionHistory.module.css";
 import React from "react";
 
 export default function TransactionHistory({ items }) {
   return (
-    <div className="section">
-      <table className="table">
+    <div className={"section"}>
+      <table className={css.table}>
         <thead>
           <tr>
-            <th className="table-titles">Type</th>
-            <th className="table-titles">Amount</th>
-            <th className="table-titles">Currency</th>
+            <th className={css.titles}>Type</th>
+            <th className={css.titles}>Amount</th>
+            <th className={css.titles}>Currency</th>
           </tr>
         </thead>
 
-        {items.map((item) => (
-          <React.Fragment key={item.id}>
-            <tbody>
-              <tr className="info-row">
-                <td className="info-column">{item.type} </td>
-                <td className="info-column">{item.amount}</td>
-                <td className="info-column">{item.currency}</td>
+        <tbody>
+          {items.map((item) => (
+            <React.Fragment key={item.id}>
+              <tr className={css.row}>
+                <td className={css.column}>{item.type} </td>
+                <td className={css.column}>{item.amount}</td>
+                <td className={css.column}>{item.currency}</td>
               </tr>
-            </tbody>
-          </React.Fragment>
-        ))}
+            </React.Fragment>
+          ))}
+        </tbody>
       </table>
     </div>
   );
